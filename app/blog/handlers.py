@@ -8,7 +8,7 @@ from .forms import LoginForm
 
 # @app.route('/index')
 @app.route('/blog/xxx')
-@login_required
+# @login_required
 def blog_index():
     return render_template('blog/index.html')
 
@@ -32,7 +32,7 @@ def login():
     return render_template('blog/login.html', title='Sign In', form=form)
 
 @app.route('/logout')
-@login_required
+# @login_required
 def logout():
     logout_user()
     return redirect(url_for('index'))

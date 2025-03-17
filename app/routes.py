@@ -8,7 +8,7 @@ from flask_login import login_required
 
 @app.route('/')
 @app.route('/index')
-@login_required
+# @login_required
 def index():
     user = {'username': 'Peter'}
     return render_template('index.html', title='Home', user=user)
